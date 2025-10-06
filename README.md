@@ -23,40 +23,7 @@ It covers environment setup, project scaffolding, sources/models, tests (generic
 - **Snapshots**
   - Track slowly changing records with snapshot configurations
 
-1) Install dbt (Databricks adapter)
-  pip install --upgrade pip
-  pip install dbt-core dbt-databricks
-
-2) File Structure
-.
-├── models/
-│ └── source/ # sources.yml lives here
-├── seeds/ # CSVs loaded with dbt seed
-├── snapshots/ # snapshot definitions
-├── macros/ # reusable Jinja macros
-├── tests/ # generic + singular tests
-└── README.md
-
-3) Configure your dbt profile
-   dbt_learning:
-  target: dev
-  outputs:
-    dev:
-      type: databricks
-      host: https://<your-workspace>.cloud.databricks.com
-      http_path: /sql/1.0/warehouses/<warehouse-id>
-      catalog: <your_dev_catalog>   # Unity Catalog
-      schema: default               # schema inside the catalog
-      threads: 4
-      token: "{{ env_var('DATABRICKS_TOKEN') }}"
-    prod:
-      type: databricks
-      host: https://<your-workspace>.cloud.databricks.com
-      http_path: /sql/1.0/warehouses/<warehouse-id>
-      catalog: <your_prod_catalog>
-      schema: default
-      threads: 4
-      token: "{{ env_var('DATABRICKS_TOKEN') }}"
 
   
+
 
