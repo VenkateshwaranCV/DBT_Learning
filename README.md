@@ -1,4 +1,4 @@
-A small hands-on repo I used to learn the **fundamentals of dbt** on **Databricks**.  
+A small hands-on repo I used to learn the **fundamentals of DBT** on **Databricks**.  
 It covers environment setup, project scaffolding, sources/models, tests (generic, custom & singular), seeds, Jinja macros, and snapshots.
 
 ---
@@ -59,3 +59,4 @@ It covers environment setup, project scaffolding, sources/models, tests (generic
       token: "{{ env_var('DATABRICKS_TOKEN') }}"
 
   
+
