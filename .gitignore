@@ -1,0 +1,7 @@
+﻿.venv/
+target/
+dbt_packages/
+logs/
+.vscode/
+dbt_learning/profiles.yml
+.env
